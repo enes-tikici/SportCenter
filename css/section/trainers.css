@@ -1,0 +1,80 @@
+#trainers{
+    width: 100%;
+    height: 750px;
+    background-color:#F1F8FF ;
+}
+
+
+#trainers .title-1{
+    text-align: center;
+    margin-top: 15px;
+    color:  #335393;
+    font-weight: 600 bold;
+    padding: 50px 0 0 0;
+    margin-top: 320px;
+}
+
+#trainers hr{
+    top: 0;
+    border: 3px solid ;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 10%;
+    color: orange;
+}
+
+#trainers .title-content{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+#trainers .title-content p{
+    font-weight: 500;
+}
+
+#trainers .img-trainers{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+#trainers .img-trainers img{
+    border-radius: 6px;
+    border: 10px dashed;
+    color: #335393;
+}
+
+#trainers .title-2{
+     text-align: center;
+    color:  #335393;
+    font-weight: 600 bold;
+    padding: 50px 0 0 0;
+    margin-top: 60px;
+}
+
+#trainers .selles{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border: 1px;
+    text-align: center;
+}
+#trainers .selles a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+#trainers .selles p{
+    font-weight: 500;
+}
+
+#trainers .selles img{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+#trainers .white{
+    background-color: white;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.15);
+}

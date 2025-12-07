@@ -1,0 +1,32 @@
+:root{
+    --background-color-1:#F1F8FF;
+    --background-color-2:white;
+    --border-color-1:rgba(255,255,255,0.2);
+    --border-color-1:rgba(255,255,255,0.15);
+}
+
+body{
+    color: var(--font-color-1);
+
+}
+
+p{
+    color: var(--font-color-2);
+    line-height: 1.45;
+}
+
+p span{
+    color: var(--font-color-1);
+    line-height: 1.45;
+}
+
+hr{
+    opacity: 1;
+    margin: 35px 0;
+    border-top-color: var(--border-color-1);
+}
+
+.section{
+    padding: 80px 0;
+    background-color: var(--background-color-1);
+}

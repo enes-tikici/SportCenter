@@ -1,0 +1,26 @@
+#footer{
+    background-color: #325493;
+    margin-top: 50px;
+    height: 320px;
+}
+
+#footer .footer-logo{
+    margin-left: 10%;
+}
+
+#footer p{
+    color: white;
+}
+
+#footer .footer-links{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+#footer a{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    text-decoration: none;
+}

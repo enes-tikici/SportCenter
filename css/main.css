@@ -1,0 +1,10 @@
+@import './vendor.css';
+@import './common.css';
+
+@import 'layout/header.css';
+
+@import 'section/hero.css';
+@import 'section/classes.css';
+@import 'section/trainers.css';
+@import 'section/reviev-contact.css';
+@import 'section/footer.css';

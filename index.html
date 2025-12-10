@@ -42,10 +42,10 @@
           <ul id="navLinks">
             <!-- Menü Linkleri -->
             <li><a href="#">Home</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Trainer</a></li>
-            <li><a href="#">Review</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#trainers">Trainer</a></li>
+            <li><a href="#review-contact">Review</a></li>
+            <li><a href="#review-contact">Contact</a></li>
 
             <!-- Join Us Butonu -->
             <button>Join Us</button>
@@ -122,18 +122,14 @@
 
           <!-- Mobil Class Butonları -->
           <div class="classes-btn">
-            <div class="btn-mobile">
-              <button>Yoga</button>
-              <button>Group</button>
-            </div>
-            <div class="btn-mobile">
-              <button>Solo</button>
-              <button>Streching</button>
-            </div>
+            <button data-class="yoga" class="active">Yoga</button>
+            <button data-class="group">Group</button>
+            <button data-class="solo" class="index">Solo</button>
+            <button data-class="stretching" class="index">Streching</button>
           </div>
 
           <!-- Class içerik -->
-          <div class="btn-classes">
+          <div class="btn-classes" id="classContent">
             <div>
               <h2>Why are your Yoga?</h2>
               <p>
@@ -158,7 +154,13 @@
 
             <!-- Yoga Görseli -->
             <div class="classes-img">
-              <img src="images/yoga.jpg" alt="yoga" height="350" weight="500" />
+              <img
+                id="classImage"
+                src="images/yoga.jpg"
+                alt="yoga"
+                height="350"
+                weight="500"
+              />
             </div>
           </div>
         </div>
@@ -180,7 +182,7 @@
             </p>
           </div>
 
-          <div>
+          <div id="bmi-box">
             <img
               src="images/bmi-index.jpg"
               alt="bmi"
@@ -188,17 +190,20 @@
               width="500"
             />
           </div>
+          <div id="bmi-pointer"></div>
         </div>
 
         <!-- BMI Inputlar -->
         <div class="input">
           <div class="input-2">
-            <input type="text" placeholder="Your Hight" />
+            <input id="height" type="number" placeholder="Your Height" />
             <p>cm</p>
           </div>
           <div class="input-2">
-            <input type="text" placeholder="Your Weight" />
+            <input id="weight" type="number" placeholder="Your Weight" />
             <p>kg</p>
+            <button id="calcBtn">Calculate</button>
+            <p id="bmiResult"></p>
           </div>
         </div>
       </div>
@@ -432,9 +437,9 @@
             <div>
               <h2>Information</h2>
               <a href="#">About Us</a>
-              <a href="#">Classes</a>
+              <a href="#classes">Classes</a>
               <a href="#">Blog</a>
-              <a href="#">Contact</a>
+              <a href="#review-contact">Contact</a>
             </div>
 
             <div>
@@ -449,5 +454,6 @@
       </div>
     </footer>
     <!-- FOOTER BİTİŞ -->
+    <script src="js/main.js"></script>
   </body>
 </html>

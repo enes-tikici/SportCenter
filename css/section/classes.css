@@ -1,186 +1,194 @@
-#classes{
-   width: 100%;
-   height: 135vh;
-   background-color: white;
+#classes {
+  width: 100%;
+  height: 135vh;
+  background-color: white;
 }
 
-#classes .clippath{
-    position: relative;
-    overflow: hidden;
+#classes .clippath {
+  position: relative;
+  overflow: hidden;
 }
 
-#classes .clippath::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    background: grey;
-    clip-path: polygon(0 0, 100% 0%, 100% 99%, 16% 100%);
-    z-index: 0;
-    opacity: 0.08;
-}
-
-#classes h1{
-    text-align: center;
-    margin-top: 15px;
-    color:  #335393;
-    font-weight: 600 bold;
-    padding: 50px 0 0 0;
-}
-
-#classes hr{
-    top: 0;
-    border: 3px solid ;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 10%;
-    color: orange;
-}
-
-#classes .content-title{
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 5%;
-}
-
-#classes .content-title p{
-    font-weight: 500;
-}
-
-#classes .classes-btn{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#classes .classes-btn button{
-    padding: 5px 25px;
-    border: none;
-    border-radius: 10px;
-    background-color: #335393;
+#classes .active{
+    background-color: #f9b233;
     color: white;
-    font-size: 16;
-    font-weight: 600;
-    margin-bottom: 50px;
 }
 
-#classes .btn-classes{
+#classes .clippath::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: grey;
+  clip-path: polygon(0 0, 100% 0%, 100% 99%, 16% 100%);
+  z-index: 0;
+  opacity: 0.08;
+}
+#classes .index{
+    z-index: 1;
+}
+
+#classes h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: #335393;
+  font-weight: 600 bold;
+  padding: 50px 0 0 0;
+}
+
+#classes hr {
+  top: 0;
+  border: 3px solid;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 10%;
+  color: orange;
+}
+
+#classes .content-title {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+#classes .content-title p {
+  font-weight: 500;
+}
+
+#classes .classes-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#classes .classes-btn button {
+  padding: 5px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #335393;
+  color: white;
+  font-size: 16;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+#classes .btn-classes {
+  display: flex;
+  justify-content: space-around;
+}
+
+#classes .btn-classes h2 {
+  color: gray;
+}
+#classes .color {
+  background-color: white;
+}
+
+#classes .btn-classes p {
+  color: gray;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#classes .classes-calculator {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 59px;
+  background-color: white;
+}
+
+#classes .classes-calculator h2 {
+  color: #335393;
+  font-weight: 600;
+}
+
+#classes .classes-calculator p {
+  font-weight: 600;
+}
+
+#classes .input {
+  display: flex;
+  margin-left: 16%;
+  margin-top: -45px;
+  gap: 15px;
+}
+
+#classes input {
+  border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+  #classes {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  #classes .btn-mobile {
     display: flex;
-    justify-content: space-around;
-}
-
-#classes .btn-classes h2{
-    color: gray;
-}
-#classes .color{
-    background-color: white;
-}
-
-#classes .btn-classes p{
-    color: gray;
-    font-size: 16px;
-    font-weight: 600 ;
-}
-
-#classes .classes-calculator{
-   display: flex;
-   justify-content: space-evenly;
-   margin-top: 59px;
-   background-color: white;
-}
-
-#classes .classes-calculator h2{
-    color: #335393;
-    font-weight: 600;
-}
-
-#classes .classes-calculator p{
-    font-weight: 600;
-}
-
-#classes .input{
-    display: flex;
-    margin-left: 16%;
-    margin-top: -45px;
     gap: 15px;
+  }
+
+  #classes .btn-classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #classes h1 {
+    font-size: 26px;
+    padding-top: 30px;
+  }
+
+  #classes hr {
+    width: 25%;
+  }
+
+  #classes .content-title {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  #classes .classes-btn {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #classes .classes-btn button {
+    width: 200px;
+    padding: 10px;
+  }
+
+    #classes .active {
+    background-color: #f9b233;
+    color: white;
+  }
+
+  #classes .classes-calculator {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  #classes .classes-calculator img {
+    margin-top: 120px;
+  }
+
+  #classes .input {
+    position: absolute;
+    margin-left: 60px;
+    margin-top: -450px;
+    justify-content: start;
+    flex-direction: column;
+  }
+  #classes .input-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #classes input {
+    width: 140px;
+  }
 }
-
-#classes input{
-    border-radius: 4px;
-}
-
-@media (max-width:576px){
-     #classes {
-        width: 100%;
-        height: auto;
-        padding-bottom: 40px;
-    }
-    #classes .btn-mobile{
-        display: flex;
-        gap: 15px;
-    }
-
-    #classes .btn-classes{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #classes h1 {
-        font-size: 26px;
-        padding-top: 30px;
-    }
-
-    #classes hr {
-        width: 25%;
-    }
-
-    #classes .content-title {
-        padding: 0 15px;
-        margin-bottom: 30px;
-    }
-
-    #classes .classes-btn {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    #classes .classes-btn button {
-        width: 200px;
-        padding: 10px;
-    }
-
-    #classes .classes-calculator {
-        flex-direction: column;
-        padding: 0 20px;
-        gap: 40px;
-        margin-top: 40px;
-    }
-
-     #classes .classes-calculator img {
-        margin-top: 120px;
-    }
-
-    #classes .input {
-        position: absolute;
-        margin-left: 60px;
-        margin-top: -450px;
-        justify-content: start;
-        flex-direction: column;
-    }
-    #classes .input-2{
-        display: flex;
-    }
-
-    #classes input {
-        width: 140px;
-    }
-
-}
-
-
-
-
-

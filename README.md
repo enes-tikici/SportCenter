@@ -43,7 +43,4 @@ Amacı; kullanıcıya spor içerikleri, eğitmen profilleri, sınıf bilgileri, 
 ### 🔹 **Footer**
 - Logo, açıklama metni ve hızlı bağlantılar
 
----
-
-## 📁 Proje Yapısı
 

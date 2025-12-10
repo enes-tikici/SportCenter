@@ -8,7 +8,7 @@ Amacı; kullanıcıya spor içerikleri, eğitmen profilleri, sınıf bilgileri, 
 ## 🚀 Özellikler
 
 ### 🔹 **Responsive Tasarım**
-- Mobil, tablet ve masaüstü uyumlu
+- Mobil ve masaüstü uyumlu
 - Mobilde açılır kapanır hamburger menü
 - Fixed-top şeffaf navbar
 

@@ -83,6 +83,56 @@
     background-color: white;
     box-shadow: -5px 5px 10px rgba(0,0,0,0.15);
 }
+.trainer-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Resim */
+.trainer-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover olunca resim biraz zoom yapsın */
+.trainer-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Yazı kutusu (başta görünmez) */
+.trainer-info {
+  position: absolute;
+  bottom: -120px; /* NORMALDE GİZLİ */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #294c7a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: bottom 0.35s ease;
+  width: 80%;
+}
+
+/* Hover olunca kutu yukarı çıkar */
+.trainer-card:hover .trainer-info {
+  bottom: 20px; /* Görünecek pozisyon */
+}
+
+.trainer-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.trainer-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
 
 @media (max-width:576px){
     #trainers {

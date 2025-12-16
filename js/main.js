@@ -123,3 +123,21 @@ const btn = document.getElementById("calcBtn");
 
     pointer.style.left = pos + "px";
   });
+
+  const menuIcon = document.getElementById('menuIcon');
+    const navLinks = document.getElementById('navLinks');
+
+    // 2. Eğer bu öğeler sayfada mevcutsa işlemi başlat
+    if (menuIcon && navLinks) {
+        // 3. Menü ikonuna tıklama olay dinleyicisi ekle
+        menuIcon.addEventListener('click', function() {
+            
+            // A. Menü listesini göster/gizle
+            // CSS'te tanımladığınız '#navbar ul.show' sınıfını ekleyip/kaldırır.
+            navLinks.classList.toggle('show');
+            
+            // B. Hamburger ikonunu 'X' işaretine dönüştür
+            // CSS'te tanımladığınız '.menu-icon.active' sınıfını ekleyip/kaldırır.
+            menuIcon.classList.toggle('active');
+        });
+    }

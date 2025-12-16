@@ -94,35 +94,77 @@ classButtons.forEach((btn) => {
 });
 
  // BMI Pointer
-const btn = document.getElementById("calcBtn");
-  const pointer = document.getElementById("bmi-pointer");
-  const result = document.getElementById("bmiResult");
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Elementleri doğru ID'lerle yakaladığımızdan emin olun
+    const heightInput = document.getElementById('height');
+    const weightInput = document.getElementById('weight');
+    const bmiPointer = document.getElementById('bmi-pointer');
+    const bmiValueSpan = document.getElementById('bmiValue');
+    const bmiStatusSpan = document.getElementById('bmiStatus');
 
-  btn.addEventListener("click", () => {
-    let h = document.getElementById("height").value;
-    let w = document.getElementById("weight").value;
+    // BMI Kategorileri ve İbre Hedef Pozisyonları
+    const bmiRanges = [
+    // Underweight (Sol Kenara yakın)
+    { limit: 18.5, position: 10, status: 'Underweight' }, 
+    
+    // Normal (Merkeze doğru)
+    { limit: 25.0, position: 33, status: 'Normal' }, 
+    
+    // Overweight (Ortanın sağında)
+    { limit: 30.0, position: 55, status: 'Overweight' }, 
+    
+    // Obese (Sağ tarafa doğru)
+    { limit: 35.0, position: 75, status: 'Obese' }, 
+    
+    // Extremely Obese (En sağ Kenara yakın)
+    { limit: Infinity, position: 95, status: 'Extremely Obese' } 
+];
 
-    if (!h || !w) {
-      result.textContent = "Lütfen boy ve kilo girişi yapınız!";
-      return;
+    function calculateAndMovePointer() {
+        const heightCm = parseFloat(heightInput.value);
+        const weightKg = parseFloat(weightInput.value);
+
+        // Giriş kontrolü
+        if (!heightCm || !weightKg || heightCm <= 0 || weightKg <= 0) {
+            bmiValueSpan.textContent = '0.0';
+            bmiStatusSpan.textContent = 'Enter data.';
+            bmiPointer.classList.add('hidden'); // İbreyi gizle
+            return;
+        }
+
+        bmiPointer.classList.remove('hidden'); 
+        
+        // BMI Hesaplama
+        const heightM = heightCm / 100;
+        const bmi = weightKg / (heightM * heightM);
+        const roundedBmi = bmi.toFixed(1);
+
+        bmiValueSpan.textContent = roundedBmi;
+
+        let pointerPosition = 0;
+        let currentStatus = 'Unknown';
+
+        // Pozisyonu belirleme
+        for (const range of bmiRanges) {
+            if (bmi < range.limit) {
+                currentStatus = range.status;
+                pointerPosition = range.position;
+                break;
+            }
+        }
+        
+        bmiStatusSpan.textContent = currentStatus;
+        // İbreyi % cinsinden konumlandır
+        bmiPointer.style.left = `${pointerPosition}%`;
     }
 
-    let meter = h / 100;
-    let bmi = (w / (meter * meter)).toFixed(1);
+    // Input alanlarındaki değişiklikleri dinle
+    heightInput.addEventListener('input', calculateAndMovePointer);
+    weightInput.addEventListener('input', calculateAndMovePointer);
 
-    result.textContent = "Your BMI: " + bmi;
-
-    /* Konum hesaplama */
-    let pos = 0;
-
-    if (bmi < 18.5) pos = 40;          // Underweight
-    else if (bmi <= 24.9) pos = 140;   // Normal
-    else if (bmi <= 29.9) pos = 240;   // Overweight
-    else if (bmi <= 34.9) pos = 340;   // Obese
-    else pos = 430;                    // Extremely Obese
-
-    pointer.style.left = pos + "px";
-  });
+    // Sayfa yüklendiğinde bir kere çalıştır (inputlar boşsa gizler)
+    calculateAndMovePointer();
+});
 
   const menuIcon = document.getElementById('menuIcon');
     const navLinks = document.getElementById('navLinks');

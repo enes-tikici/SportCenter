@@ -97,6 +97,37 @@
   margin-top: 59px;
   background-color: white;
 }
+#bmi-box {
+    position: relative; 
+    /* İbrenin aşağı taşmasına izin verir */
+    overflow: visible; 
+}
+#bmi-pointer {
+   position: absolute;
+    bottom: -5px; /* Resmi alt kenarından biraz aşağıda (dışında) durması için */
+    left: 0%; /* JS ile değiştirilecek başlangıç noktası */
+    z-index: 100; /* Her şeyin üstünde görünür */
+
+    
+    /* Üçgenin Çizimi */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid #f29c05; 
+    
+    transition: left 0.7s ease-out;
+}
+#bmi-pointer.hidden {
+    left: -100%; 
+}
+
+#bmiResult{
+    margin-left:30% ;
+    font-size: 18px;
+    font-weight: 600;
+    color: #335393;
+}
 
 #classes .classes-calculator h2 {
   color: #335393;
